@@ -7,3 +7,4 @@ A controlled environment simulator for growing leafy green vegetables, not meant
 
 Published project summary @ https://blog.usejournal.com/our-little-mars-798d7fad53b.
 
+PS: code restructuring pending!
