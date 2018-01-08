@@ -41,7 +41,7 @@ cache = np.empty((3,4), dtype = np.float32)
 #2. load model
 model = load_model('control/control_model.h5')
 
-#2. Process events
+#3. Process events
 while True:
 	f = open("data.log", 'a')
 	time.sleep(1)
@@ -57,8 +57,10 @@ while True:
 	compressor_new, airthrower_new = get_actuator_values()
 
 	# Return new compressor and airthrower states
-	ser.write('stuff')
-
+	time.sleep(1)
+	ser.write(str(compressor_new) + ' ' + str(airthrower_new))
+	
+	# log data
 	f.write(str(data) + "\r\n")
 	f.close()
 
